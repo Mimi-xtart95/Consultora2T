@@ -84,7 +84,6 @@ const servicesData = [
     // Reinicia AOS
     AOS.refresh();
 }
-
 // ── 3. Datos miembros de equipo ──
 const teamData = [
     { emoji: '👩‍💻', name: 'Ana García', role: 'Frontend Lead', desc: 'Experta en React y diseño de sistemas. 8 años transformando ideas en interfaces.', color: '#00c9d4' },
@@ -116,5 +115,6 @@ function renderTeam() {
     });
     AOS.refresh();
 }
+
 
 renderServices();
