@@ -241,3 +241,31 @@ divider {
     70%  { opacity:1; }
     100% { transform:translateX(200px); opacity:0; }
 }
+
+.section-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #00c9d4;
+    background: rgba(0,201,212,0.08);
+    border: 1px solid rgba(0,201,212,0.25);
+    border-radius: 99px;
+    padding: 4px 16px;
+    margin-bottom: 1rem;
+}
+
+.section-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #00c9d4;
+    background: rgba(0,201,212,0.08);
+    border: 1px solid rgba(0,201,212,0.25);
+    border-radius: 99px;
+    padding: 4px 16px;
+    margin-bottom: 1rem;
+}
