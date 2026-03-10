@@ -43,7 +43,7 @@
                 <a href="#servicios" class="nav-link">Servicios</a>
                 <a href="#equipo" class="nav-link">Equipo</a>
                 <a href="#contacto" class="nav-link">Contacto</a>
-                <a href="#trabajo" class="nav-link">Trabaja con Nosotros</a>
+                <a href="trabajo.html" class="nav-link">Trabaja con Nosotros</a>
             </nav>
 
             <!-- Contactanos boton -->
@@ -194,7 +194,55 @@
     </section>
     <!-- FIN EQUIPO -->
     <!-- CONTACTO -->
+<section id="contacto" class="py-28 relative" style="background:linear-gradient(180deg,#0a1628 0%,#091520 100%)">
+        <!-- Blob decoration -->
+        <div class="blob" style="width:350px;height:350px;background:#00c9d4;top:10%;right:-100px;opacity:0.07;"></div>
+        <div class="blob" style="width:300px;height:300px;background:#ff6b35;bottom:10%;left:-80px;opacity:0.15;"></div>
 
+        <div class="max-w-3xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-14">
+                <div class="section-tag" data-aos="fade-up">Contacto</div>
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-5" data-aos="fade-up" data-aos-delay="100">
+                    ¿Hablamos sobre tu <span class="gradient-text">proyecto</span>?
+                </h2>
+                <p class="text-slate-400 text-lg" data-aos="fade-up" data-aos-delay="200">
+                    Cuéntanos qué necesitas y te respondemos en menos de 24 horas.
+                </p>
+            </div>
+
+            <form id="contact-form" novalidate
+                class="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-3xl p-8 md:p-12 space-y-6"
+                data-aos="fade-up" data-aos-delay="150">
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-2 font-medium" for="nombre">Nombre</label>
+                        <input id="nombre" type="text" placeholder="Tu nombre" class="form-input" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-2 font-medium" for="email">Email</label>
+                        <input id="email" type="email" placeholder="tu@email.com" class="form-input" required />
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm text-slate-400 mb-2 font-medium" for="asunto">Asunto</label>
+                    <input id="asunto" type="text" placeholder="¿En qué podemos ayudarte?" class="form-input" />
+                </div>
+                <div>
+                    <label class="block text-sm text-slate-400 mb-2 font-medium" for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" rows="5" placeholder="Cuéntanos tu proyecto..."
+                        class="form-input resize-none" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full justify-center text-base py-4">
+                    Enviar Mensaje
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                </button>
+                <div id="form-msg" class="hidden text-center py-3 rounded-xl text-sm font-medium"></div>
+            </form>
+        </div>
+    </section>
     <!-- FIN CONTACTO -->
     <!-- FOOTER -->
     <footer class="py-12">
@@ -217,7 +265,7 @@
                     <a href="#servicios" class="hover:text-cyan-400 transition-colors">Servicios</a>
                     <a href="#equipo" class="hover:text-cyan-400 transition-colors">Equipo</a>
                     <a href="#contacto" class="hover:text-cyan-400 transition-colors">Contacto</a>
-                    <a href="#contacto" class="hover:text-cyan-400 transition-colors">Trabaja con Nosotros</a>
+                    <a href="trabajo.html" class="hover:text-cyan-400 transition-colors">Trabaja con Nosotros</a>
                 </nav>
 
                 <!-- Social -->
@@ -274,4 +322,3 @@
 
 
 </html>
-
