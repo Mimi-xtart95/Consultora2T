@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con Nosotros - NeoTech</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap');
+
+        .swiper {
+            width: 100%;
+            height: 480px; 
+            border-radius: 1rem;
+        }
+        :root {
+            --swiper-theme-color: #ffffff;
+            --swiper-navigation-size: 24px;
+        }
+    </style>
+</head>
+
+<body class="bg-[#08101a] min-h-screen text-white font-sans relative overflow-x-hidden">
+
+    <header id="navbar-glass" class="fixed top-0 left-0 right-0 z-50 bg-[#08101a] border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-[1400px] mx-auto px-8 h-[72px] flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3 group w-1/4">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center shadow-lg">
+                    <span class="text-white font-black text-lg" style="font-family:'Syne', sans-serif">N</span>
+                </div>
+                <span class="text-white font-bold text-xl" style="font-family:'Syne', sans-serif">
+                    Neo<span class="text-cyan-400">Tech</span>
+                </span>
+            </a>
+            
+            <div class="hidden md:flex items-center justify-center gap-10 flex-1 text-sm font-medium">
+                <a href="#" class="hover:text-cyan-400 transition-colors">Qué hacemos</a>
+                <a href="#" class="hover:text-cyan-400 transition-colors">Nuestras ideas</a>
+                <a href="#" class="hover:text-cyan-400 transition-colors">Quiénes somos</a>
+            </div>
+
+            <div class="hidden md:flex justify-end w-1/4 text-sm font-medium">
+                <a href="#" class="hover:text-cyan-400 transition-colors">Incórporate</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="fixed top-[72px] left-0 right-0 z-40 bg-[#0a1628] w-full px-8 shadow-md border-b border-gray-800/50">
+        <div class="max-w-[1400px] mx-auto h-[50px] flex items-center justify-between text-white">
+            <div class="hover:text-cyan-400 font-bold text-base md:text-lg">
+                Empleos
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-xs font-medium opacity-90">
+                <a href="#" class="hover:text-cyan-400 transition-colors">Búsqueda de empleos</a>
+                <a href="#" class="hover:text-cyan-400 transition-colors">Empleos guardados</a>
+                <a href="#" class="hover:text-cyan-400 transition-colors">Accede a tu solicitud</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="max-w-[1400px] mx-auto px-8 pt-[200px] pb-12 min-h-screen flex items-center">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center w-full">
+            
+            <div class="lg:col-span-5 flex flex-col justify-center">
+                <h1 class="text-6xl lg:text-[75px] font-black leading-[1.05] tracking-tight">
+                    Trabaja con<br>Nosotros
+                </h1>
+            </div>
+
+            <div class="lg:col-span-7 lg:-translate-y-8 w-full">
+                <div class="swiper mySwiper rounded-2xl shadow-2xl">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide flex items-center justify-center bg-[#f24141] text-white text-3xl font-bold">
+                            Slide 1
+                        </div>
+                        <div class="swiper-slide flex items-center justify-center bg-[#f24141] text-white text-3xl font-bold">
+                            Slide 2
+                        </div>
+                        <div class="swiper-slide flex items-center justify-center bg-[#f24141] text-white text-3xl font-bold">
+                            Slide 3
+                        </div>
+                        <div class="swiper-slide flex items-center justify-center bg-[#f24141] text-white text-3xl font-bold">
+                            Slide 4
+                        </div>
+                        <div class="swiper-slide flex items-center justify-center bg-[#f24141] text-white text-3xl font-bold">
+                            Slide 5
+                        </div>
+                        <div class="swiper-slide flex items-center justify-center bg-[#f24141] text-white text-3xl font-bold">
+                            Slide 6
+                        </div>
+                        <div class="swiper-slide flex items-center justify-center bg-[#f24141] text-white text-3xl font-bold">
+                            Slide 7
+                        </div>
+                        <div class="swiper-slide flex items-center justify-center bg-[#f24141] text-white text-3xl font-bold">
+                            Slide 8
+                        </div>
+                        <div class="swiper-slide flex items-center justify-center bg-[#f24141] text-white text-3xl font-bold">
+                            Slide 9
+                        </div>
+                        <div class="swiper-slide flex items-center justify-center bg-[#f24141] text-white text-3xl font-bold">
+                            Slide 10
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next !right-6"></div>
+                    <div class="swiper-button-prev !left-6"></div>
+                    <div class="swiper-pagination !bottom-4"></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
