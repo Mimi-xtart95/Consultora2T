@@ -116,5 +116,52 @@ function renderTeam() {
     AOS.refresh();
 }
 
+// ── Contadores Animados con Anime.js ──
+function initContadores() {
+    const contadores = document.querySelectorAll('.contador-animado');
+
+    //El intersectionObserver sirve para que cuando se haga el scroll y el elemento sea visible, se ejecute la animación del contador
+    const observer = new IntersectionObserver((entradas, obs) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                const elemento = entrada.target;
+                const valorFinal = parseInt(elemento.getAttribute('data-valor'))
+                const obj = { valor: 0 };
+
+                anime({
+                    targets: obj,
+                    valor: valorFinal,
+                    round: 1, //Para evitar que nos muestre numero decimales, redondea al numero entero mas cercano
+                    easing: 'easeOutExpo', //Efecto de salida rapido pero cuando esta apunto de llegar al numero se frena suavemente
+                    duration: 2500, //2.5 segundos
+                    update: function () {
+                        elemento.innerHTML = obj.valor;
+                    }
+                });
+                obs.unobserve(elemento); //Solo se anima una vez, luego se deja de observar el elemento
+            }
+        });
+    }, { threshold: 0.5 }); //Se activa cuando la pantalla esta a la mitad
+
+    contadores.forEach(contador => {
+        observer.observe(contador);
+    });
+}
+
+// ── Levitación de etiquetas flotantes en el Hero con Anime.js ──
+function initLevitacion() {
+    anime({
+        targets: '.etiqueta-flotante',
+        translateY: ['-8px  ', '8px'], //Sube y baja 8px
+        loop: true, //Hace que la animación se repita infinitamente
+        direction: 'alternate', //Hace que la animación se reproduzca en ambos sentidos (sube y baja)
+        easing: 'easeInOutSine', //Efecto de movimiento suave al subir y bajar
+        duration: 1000, //3 segundos para completar un ciclo completo (sube y baja)
+        delay: anime.stagger(400) //Desincroniza las etiqueta para que no se muevan al mismo tiempo
+    });
+}
 
 renderServices();
+renderTeam();
+initContadores();
+initLevitacion();
