@@ -161,6 +161,38 @@ function initLevitacion() {
     });
 }
 
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+    const msgDiv = document.getElementById('form-msg');
+
+    if (!nombre || !email || !mensaje) {
+        msgDiv.textContent = '⚠️ Por favor, completa los campos requeridos.';
+        msgDiv.className = 'block text-center py-3 rounded-xl text-sm font-medium bg-orange-500/10 text-orange-400 border border-orange-500/20';
+        return;
+    }
+    //Especifica el formato del email --> ejemplo @ email . es
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        msgDiv.textContent = '⚠️ Introduce un email válido.';
+        msgDiv.className = 'block text-center py-3 rounded-xl text-sm font-medium bg-orange-500/10 text-orange-400 border border-orange-500/20';
+        return;
+    }
+
+    // Simulación de formulario enviado
+    const btn = this.querySelector('button[type=submit]');
+    btn.textContent = 'Enviando…';
+    btn.disabled = true;
+    setTimeout(() => {
+        msgDiv.textContent = '✅ ¡Mensaje enviado! Te contactaremos pronto.';
+        msgDiv.className = 'block text-center py-3 rounded-xl text-sm font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20';
+        this.reset();
+        btn.innerHTML = 'Enviar Mensaje <svg class="w-5 h-5 inline ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>';
+        btn.disabled = false;
+    }, 1500);
+});
+
 renderServices();
 renderTeam();
 initContadores();
