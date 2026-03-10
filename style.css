@@ -163,4 +163,29 @@ h1,h2,h3,h4,h5 { font-family: 'Syne', sans-serif; }
     padding: 1.5rem;
     flex: 1;
 }
+
 /* Tarjetas de equipo */
+.team-card {
+    background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+    border: 1px solid rgba(0,201,212,0.12);
+    border-radius: 1.5rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+.team-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255,107,53,0.4);
+    box-shadow: 0 24px 60px rgba(255,107,53,0.2);
+}
+.avatar {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00c9d4, #ff6b35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 1.25rem;
+    box-shadow: 0 0 30px rgba(0,201,212,0.3);
+}
