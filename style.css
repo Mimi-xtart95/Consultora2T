@@ -234,7 +234,7 @@ divider {
 .line:nth-child(1) { top:20%; width:60%; left:-10%; animation-delay:0s; }
 .line:nth-child(2) { top:40%; width:80%; left:-20%; animation-delay:1.5s; }
 .line:nth-child(3) { top:65%; width:50%; left:30%; animation-delay:3s; }
-.line:nth-child(4) { top:82%; width:70%; left:-5%; animation-delay:4.5s; }
+.line:nth-child(4) { top:81%; width:70%; left:-5%; animation-delay:4.5s; }
 @keyframes lineSweep {
     0%   { transform:translateX(-100px); opacity:0; }
     30%  { opacity:1; }
@@ -273,3 +273,14 @@ divider {
     border-color: #00c9d4;
     box-shadow: 0 0 0 3px rgba(0,201,212,0.12);
 }
+
+.scroll-dot {
+    width:6px; height:6px;
+    border-radius:50%;
+    background:#00c9d4;
+    animation: bounce 1.6s infinite;
+}
+    @keyframes bounce {
+        0%,100% { transform:translateY(0); opacity:1; }
+        50%      { transform:translateY(8px); opacity:.4; }
+    }
