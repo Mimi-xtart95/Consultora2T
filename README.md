@@ -58,10 +58,6 @@ Abrir el proyecto: Simplemente abre el archivo index.html en tu navegador prefer
 Para cumplir con los estándares de desarrollo profesional, se ha utilizado una rama de desarrollo (dev) independiente de la rama principal (main), asegurando así la estabilidad del despliegue final. 
 
 🌐 Despliegue 
-
 El proyecto se encuentra desplegado y operativo en el siguiente enlace: 
 
 https://neotech-amml.great-site.net/
-
-
-[INSERTAR AQUÍ TU URL DE INFINITYFREE O GITHUB PAG
