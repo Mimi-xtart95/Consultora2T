@@ -109,9 +109,18 @@
                         class="w-full object-cover" style="max-height:520px;" />
 
                     <!-- Robot 3D con Spline -->
-                    <div class="hidden lg:block" style="position: absolute; top: -250px; right: -42px; width: 280px; height: 280px; z-index: 40;" data-aos="fade-down" data-aos-delay="500">
-                        <a href="https://github.com/Mimi-xtart95/Consultora2T.git">
-                        <spline-viewer url="https://prod.spline.design/qBwjfCX2u3WnMrWY/scene.splinecode" background="transparent"></spline-viewer>
+                    <div class="hidden lg:block"
+                        style="position: absolute; top: -250px; right: -40px; width: 280px; height: 280px; z-index: 40;"
+                        data-aos="fade-down" data-aos-delay="500">
+                        <a href="https://github.com/Mimi-xtart95/Consultora2T.git" target="_blank"
+                            style="position: absolute; inset: 0; z-index: 50; display: block;"></a>
+                        <!--Para poder conseguir que el link se pegue al robo, debemos modificar varios parametros
+                        Primero, debemos posicionarlo al mismo nivel del robot (absolute), agregamos el inset 0 que hara que su 
+                        rango X e Y se extienda a todos los borders del robot, al hacerlo display
+                        block le obligamos a que respete el espacio y que solo se quede en ese pequeño recuadro; finalmente le ponemos
+                        en la ubicacion z-index 50 para conseguir atraparlo del todo, como una capa que supercubra al robot-->
+                        <spline-viewer url="https://prod.spline.design/qBwjfCX2u3WnMrWY/scene.splinecode"
+                            background="transparent"></spline-viewer>
                     </div>
                     <div class="absolute -bottom-5 -left-5 bg-gradient-to-br from-cyan-300 to-teal-600 text-white rounded-2xl px-5 py-3 shadow-2xl hidden lg:block"
                         data-aos="zoom-in" data-aos-delay="600">
@@ -323,5 +332,6 @@
 
 
 </html>
+
 
 
