@@ -57,7 +57,7 @@ const servicesData = [
         tag: 'Design',
     },
 ];
-
+// Función de carga de las tarjetas
     function renderServices() {
     const grid = document.getElementById('services-grid');
     grid.innerHTML = '';
@@ -67,10 +67,10 @@ const servicesData = [
     card.className = 'service-card';
     card.setAttribute('data-aos', 'fade-up');
     card.setAttribute('data-aos-delay', delay);
-    const isEmoji = !s.imag.includes('.');
+    const isimagen = !s.imag.includes('.');
     card.innerHTML = `
-        <div class="service-card-media">${isEmoji
-            ? `<span class="service-card-emoji">${s.imag}</span>`
+        <div class="service-card-media">${isimagen
+            ? `<span class="service-card">${s.imag}</span>`
             : `<img src="${s.imag}" alt="${s.title}" class="service-card-img">`
         }</div>
         <div class="service-card-body">
@@ -132,8 +132,8 @@ function initContadores() {
                     targets: obj,
                     valor: valorFinal,
                     round: 1, //Para evitar que nos muestre numero decimales, redondea al numero entero mas cercano
-                    easing: 'easeOutExpo', //Efecto de salida rapido pero cuando esta apunto de llegar al numero se frena suavemente
-                    duration: 2500, //2.5 segundos
+                    easing: 'easeInOutSine', //Efecto de salida rapido pero cuando esta apunto de llegar al numero se frena suavemente
+                    duration: 3500, //3.5 segundos
                     update: function () {
                         elemento.innerHTML = obj.valor;
                     }
@@ -167,7 +167,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     const email = document.getElementById('email').value.trim();
     const mensaje = document.getElementById('mensaje').value.trim();
     const msgDiv = document.getElementById('form-msg');
-
+//En caso de que alguno de los campos nombre, email o mensaje no estén rellenados da error
     if (!nombre || !email || !mensaje) {
         msgDiv.textContent = '⚠️ Por favor, completa los campos requeridos.';
         msgDiv.className = 'block text-center py-3 rounded-xl text-sm font-medium bg-orange-500/10 text-orange-400 border border-orange-500/20';

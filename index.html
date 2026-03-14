@@ -7,11 +7,9 @@
     <title>NeoTech Consulting - Impulsamos el Futuro con Tecnología</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,6 +26,7 @@
 
             <!-- Logo -->
             <a href="#hero" class="flex items-center gap-3 group">
+                <!--Div de Parametro para logo de la pagina [NeoTech]-->
                 <div
                     class="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center shadow-lg">
                     <span class="text-white font-black text-lg" style="font-family:Syne,sans-serif">N</span>
@@ -69,13 +68,13 @@
             <div class="line"></div>
             <div class="line"></div>
         </div>
-        
+
         <div class="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-20 w-full">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
 
                 <!-- Título -->
                 <div>
-                    <div class="section-tag" data-aos="fade-right" data-aos-delay="100">✦ Consultora Tecnológica</div>
+                    <div class="section-tag" data-aos="fade-right" data-aos-delay="100">✦ Consultora Tecnológica ✦</div>
                     <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-6 text-white"
                         data-aos="fade-right" data-aos-delay="200">
                         Impulsamos<br>
@@ -103,10 +102,11 @@
                         <span class="text-xs text-slate-500 tracking-widest uppercase">Scroll para explorar</span>
                     </div>
                 </div>
-                
+                <!--Portada miembros de grupo fundador-->
                 <div class="hero-image-wrap" data-aos="fade-left" data-aos-delay="300">
-                    <img src="Img/header_ajustes_especificos_1.jpg" alt="Equipo NeoTech trabajando en soluciones digitales"
-                        class="w-full object-cover" style="max-height:520px;" />
+                    <img src="Img/header_ajustes_especificos_1.jpg"
+                        alt="Equipo NeoTech trabajando en soluciones digitales" class="w-full object-cover"
+                        style="max-height:520px;" />
 
                     <!-- Robot 3D con Spline -->
                     <div class="hidden lg:block"
@@ -165,7 +165,7 @@
             </div>
         </div>
     </section>
- <!-- FIN TRAYECTORIA -->
+    <!-- FIN TRAYECTORIA -->
     <!-- FIN HERO -->
     <!-- SECCIÓN SERVICIOS -->
     <section id="servicios" class="py-28 relative" style="background:linear-gradient(180deg,#0a1628 0%,#091520 100%)">
@@ -204,7 +204,7 @@
     </section>
     <!-- FIN EQUIPO -->
     <!-- CONTACTO -->
-<section id="contacto" class="py-28 relative" style="background:linear-gradient(180deg,#0a1628 0%,#091520 100%)">
+    <section id="contacto" class="py-28 relative" style="background:linear-gradient(180deg,#0a1628 0%,#091520 100%)">
         <!-- Blob decoration -->
         <div class="blob" style="width:350px;height:350px;background:#00c9d4;top:10%;right:-100px;opacity:0.07;"></div>
         <div class="blob" style="width:300px;height:300px;background:#ff6b35;bottom:10%;left:-80px;opacity:0.15;"></div>
@@ -246,10 +246,15 @@
                     Enviar Mensaje
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                            transform="rotate(90, 12, 12)" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                     </svg>
+                    <!--M12 19 — mueve el cursor al punto (12, 19)
+                        l9 2 — dibuja una línea relativa hacia (9, 2)
+                        -9-18 — línea hacia (-9, -18), formando el cuerpo de la flecha
+                        -9 18 9-2 — dibuja los otros lados
+                        zm0 0v-8 — cierra la figura y dibuja la línea central de la flecha hacia arriba 8 unidades-->
                 </button>
-                <div id="form-msg" class="hidden text-center py-3 rounded-xl text-sm font-medium"></div>
+                <div id="form-Wmsg" class="hidden text-center py-3 rounded-xl text-sm font-medium"></div>
             </form>
         </div>
     </section>
@@ -332,6 +337,3 @@
 
 
 </html>
-
-
-
